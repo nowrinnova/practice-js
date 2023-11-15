@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>calculator</title>
+</head>
+
+<body>
+
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div class="button-container">
+            <button class="button" onclick="currentValue='';
+                document.getElementById('display').value = currentValue;">c</button>
+            <button class="button" onclick="currentValue=currentValue+'1';
+            document.getElementById('display').value = currentValue;
+            ">1</button>
+            <button class="button" onclick="currentValue=currentValue+'2';
+            document.getElementById('display').value = currentValue;
+            ">2</button>
+            <button class="button" onclick="currentValue=currentValue+'+';
+            document.getElementById('display').value = currentValue;
+            ">+</button>
+            <button class="button" onclick="currentValue=currentValue+'3';
+            document.getElementById('display').value = currentValue;
+            ">3</button>
+            <button class="button" onclick="currentValue=currentValue+'4';
+            document.getElementById('display').value = currentValue;
+            ">4</button>
+            <button class="button" onclick="currentValue=currentValue+'-';
+            document.getElementById('display').value = currentValue;
+            ">-</button>
+            <button class="button" onclick="currentValue=currentValue+'5';
+            document.getElementById('display').value = currentValue;
+            ">5</button>
+            <button class="button" onclick="currentValue=currentValue+'6';
+            document.getElementById('display').value = currentValue;
+            ">6</button>
+            <button class="button" onclick="currentValue=currentValue+'*';
+            document.getElementById('display').value = currentValue;
+            ">*</button>
+            <button class="button" onclick="currentValue=currentValue+'7';
+            document.getElementById('display').value = currentValue;
+            ">7</button>
+            <button class="button" onclick="currentValue=currentValue+'8';
+            document.getElementById('display').value = currentValue;
+            ">8</button>
+            <button class="button" onclick="currentValue=currentValue+'/';
+            document.getElementById('display').value = currentValue;
+            ">/</button>
+            <button class="button" onclick="
+            currentValue= eval(currentValue);
+            document.getElementById('display').value = currentValue;
+            ">=</button>
+            <button class="button" onclick="currentValue=currentValue+'9';
+            document.getElementById('display').value = currentValue;
+            ">9</button>
+            <button class="button" onclick="currentValue=currentValue+'0';
+            document.getElementById('display').value = currentValue;
+            ">0</button>
+            <button class="button">.</button>
+
+        </div>
+    </div>
+    <script>
+        let currentValue = '';
+        document.getElementById('display').value = currentValue;
+        console.log(currentValue);
+    </script>
+</body>
+
+</html>
