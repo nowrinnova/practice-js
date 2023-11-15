@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+
+<body>
+    <button class="add1" onclick="cartQuantity= cartQuantity+1;
+         document.getElementById('cart-summary').innerText = 'bag ' + cartQuantity + ' adde';">Add
+        to Bag</button>
+    <button class="move" onclick="cartQuantity= cartQuantity-1;
+    document.getElementById('cart-summary').innerText = 'bag ' + cartQuantity + ' adde';">Move To Wishlist</button>
+    <button class="add2" onclick="cartQuantity= cartQuantity+2;
+    document.getElementById('cart-summary').innerText = 'bag ' + cartQuantity + ' adde';">Add 1+1 sale item</button>
+    <h1 id="cart-summary"></h1>
+    <script>
+        // let cartQuantity = 0;
+        // document.getElementById('cart-summary').innerText = 'bag ' + cartQuantity + ' adde';
+        // console.log(cartQuantity);
+        let cartQuantity = 10;
+        document.getElementById('cart-summary').innerText = 'bag ' + cartQuantity + ' adde';
+        console.log(cartQuantity);
+    </script>
+</body>
+
+</html>
