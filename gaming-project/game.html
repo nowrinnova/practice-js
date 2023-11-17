@@ -43,8 +43,81 @@ else{
 }
 alert('user have choosen bat' +'...'+ computer +'...'+ result+'...');
     ">Bat</button>
-  <button>Ball</button>
-  <button>Stamp</button>
+
+  <!-- .................................. -->
+
+  <button onclick=" 
+  randomNumber= Math.random()*3;
+  ComputerNumber='';
+   computer='';
+   result='';
+  // console.log('you have choosen Bat');
+if(randomNumber<0 && randomNumber>=1){
+ computer='computer have choosen ball';
+  // console.log('computer choose bat');
+  ComputerNumber='ball';
+}
+else if(randomNumber>1 && randomNumber<=2){
+  computer='computer have choosen bat';
+  // console.log('computer choose ball');
+  
+  ComputerNumber='bat';
+}
+else{
+   computer= ' computer have choosen stamp';
+  //  console.log('computer choose stamp');
+  ComputerNumber='stamp';
+}
+
+if(ComputerNumber==='bat'){
+  result= ' finally computer win'
+}
+else if(ComputerNumber ==='stamp'){
+  result =' finally user win';
+}
+else{
+  result ='finally tie ';
+}
+alert('user have choosen ball' +'...'+ computer +'...'+ result+'...');
+  ">Ball</button>
+
+
+
+
+  <button onclick=" 
+   randomNumber= Math.random()*3;
+   ComputerNumber='';
+   computer='';
+   result='';
+  // console.log('you have choosen Bat');
+if(randomNumber<0 && randomNumber>=1){
+ computer='computer have choosen stamp';
+  // console.log('computer choose bat');
+  ComputerNumber='stamp';
+}
+else if(randomNumber>1 && randomNumber<=2){
+  computer='computer have choosen bat';
+  // console.log('computer choose ball');
+  
+  ComputerNumber='bat';
+}
+else{
+   computer= ' computer have choosen ball';
+  //  console.log('computer choose stamp');
+  ComputerNumber='ball';
+}
+
+if(ComputerNumber==='ball'){
+  result= ' finally computer win'
+}
+else if(ComputerNumber ==='stamp'){
+  result =' finally tie ';
+}
+else{
+  result ='finally user win  ';
+}
+alert('user have choosen stamp' +'...'+ computer +'...'+ result+'...');
+  ">Stamp</button>
 </body>
 
 </html>
