@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+</head>
+
+<body>
+  <h1>Bat-Ball-Stamp</h1>
+  <button onclick=" 
+    let randomNumber= Math.random()*3;
+    let ComputerNumber='';
+    let computer='';
+    let result='';
+    // console.log('you have choosen Bat');
+  if(randomNumber<0 && randomNumber>=1){
+   computer='computer have choosen bat';
+    // console.log('computer choose bat');
+    ComputerNumber='bat';
+  }
+  else if(randomNumber>1 && randomNumber<=2){
+    computer='computer have choosen ball';
+    // console.log('computer choose ball');
+    
+    ComputerNumber='ball';
+  }
+  else{
+     computer= ' computer have choosen stamp';
+    //  console.log('computer choose stamp');
+    ComputerNumber='stamp';
+  }
+
+if(ComputerNumber==='ball'){
+    result= ' finally user win'
+}
+else if(ComputerNumber ==='stamp'){
+    result =' finally computer win';
+}
+else{
+    result ='finally tie ';
+}
+alert('user have choosen bat' +'...'+ computer +'...'+ result+'...');
+    ">Bat</button>
+  <button>Ball</button>
+  <button>Stamp</button>
+</body>
+
+</html>
