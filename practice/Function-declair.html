@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function </title>
+</head>
+
+<body>
+    <button onclick="
+       one();
+      let x=  computerChoice;
+      two();
+      alert('user choose bat '+'.....'+'Computer choose '+ x +' .. '+result); 
+        ">Ball
+    </button>
+    <script>
+        let number;
+        let computerChoice;
+        let result;
+
+        function one() {
+            number = Math.random() * 3;
+            if (number > 0 && number <= 1) {
+                computerChoice = ' bat';
+            } else if (number > 1 && number <= 2) {
+                computerChoice = ' ball';
+            } else {
+                computerChoice = 'stamp';
+            }
+
+        }
+
+        function two() {
+            console.log(computerChoice);
+            if (computerChoice === 'stamp') {
+                result = 'user win';
+            } else if (computerChoice === 'bat') {
+                result = 'computer win';
+            } else {
+                result = 'tie';
+            }
+            console.log(result);
+
+        }
+    </script>
+</body>
+
+</html>

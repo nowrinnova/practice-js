@@ -10,10 +10,10 @@
 <body>
 
     <script>
-        let age = 97;
+        let age = 27;
         let gender;
         let money = 100;
-        if (age < 5) {
+        if (age <= 5) {
             money = money - money;
             console.log('you are free and fees are ' + money + ' taka');
         } else if (age < 8 && age > 5) {
@@ -21,6 +21,8 @@
             console.log(' fees are ' + money + ' taka');
         } else if (age > 65) {
             money = money * 0.30;
+            console.log(' fees are ' + money + ' taka');
+        } else {
             console.log(' fees are ' + money + ' taka');
         }
     </script>

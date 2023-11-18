@@ -9,63 +9,38 @@
 
 <body>
   <h1>Bat-Ball-Stamp</h1>
-  <button onclick=" 
-    let randomNumber= Math.random()*3;
-    let ComputerNumber='';
-    let computer='';
+  <button onclick="
     let result='';
-    // console.log('you have choosen Bat');
-  if(randomNumber<0 && randomNumber>=1){
-   computer='computer have choosen bat';
-    // console.log('computer choose bat');
-    ComputerNumber='bat';
-  }
-  else if(randomNumber>1 && randomNumber<=2){
-    computer='computer have choosen ball';
-    // console.log('computer choose ball');
-    
-    ComputerNumber='ball';
-  }
-  else{
-     computer= ' computer have choosen stamp';
-    //  console.log('computer choose stamp');
-    ComputerNumber='stamp';
-  }
-
-if(ComputerNumber==='ball'){
-    result= ' finally user win'
-}
-else if(ComputerNumber ==='stamp'){
-    result =' finally computer win';
-}
-else{
-    result ='finally tie ';
-}
-alert('user have choosen bat' +'...'+ computer +'...'+ result+'...');
+    randomNumberSelection();
+// if(ComputerNumber==='ball'){
+//     result= ' finally user win'
+// }
+// else if(ComputerNumber ==='stamp'){
+//     result =' finally computer win';
+// }
+// else{
+//     result ='finally tie ';
+// }
+// alert('user have choosen bat' +'...'+ computer +'...'+ result+'...');
     ">Bat</button>
 
   <!-- .................................. -->
 
   <button onclick=" 
+   result='';
   randomNumber= Math.random()*3;
   ComputerNumber='';
    computer='';
-   result='';
-  // console.log('you have choosen Bat');
 if(randomNumber<0 && randomNumber>=1){
  computer='computer have choosen ball';
-  // console.log('computer choose bat');
   ComputerNumber='ball';
 }
 else if(randomNumber>1 && randomNumber<=2){
   computer='computer have choosen bat';
-  // console.log('computer choose ball');
-  
   ComputerNumber='bat';
 }
 else{
    computer= ' computer have choosen stamp';
-  //  console.log('computer choose stamp');
   ComputerNumber='stamp';
 }
 
@@ -118,6 +93,30 @@ else{
 }
 alert('user have choosen stamp' +'...'+ computer +'...'+ result+'...');
   ">Stamp</button>
+
+  <script>
+    let ComputerNumber = '';
+    let computer = '';
+
+    function randomNumberSelection() {
+
+
+      let randomNumber = Math.random() * 3;
+      if (randomNumber < 0 && randomNumber >= 1) {
+        computer = 'computer have choosen bat';
+        ComputerNumber = 'bat';
+      } else if (randomNumber > 1 && randomNumber <= 2) {
+        computer = 'computer have choosen ball';
+        ComputerNumber = 'ball';
+      } else {
+        computer = ' computer have choosen stamp';
+        ComputerNumber = 'stamp';
+      }
+      return ComputerNumber;
+
+    }
+    console.log(ComputerNumber);
+  </script>
 </body>
 
 </html>
