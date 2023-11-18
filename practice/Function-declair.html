@@ -8,17 +8,20 @@
 </head>
 
 <body>
+    <h1>Bat-Ball-Stamp</h1>
     <button onclick="
        one();
       let x=  computerChoice;
-      two();
+      let result=two('bal',computerChoice);
+      
       alert('user choose bat '+'.....'+'Computer choose '+ x +' .. '+result); 
         ">Ball
     </button>
+
     <script>
         let number;
         let computerChoice;
-        let result;
+        let userChoice;
 
         function one() {
             number = Math.random() * 3;
@@ -32,18 +35,36 @@
 
         }
 
-        function two() {
-            console.log(computerChoice);
-            if (computerChoice === 'stamp') {
-                result = 'user win';
-            } else if (computerChoice === 'bat') {
-                result = 'computer win';
+        function two(userChoice, computerChoice) {
+            if (userChoice === 'bat') {
+                if (computerChoice == userChoice) {
+                    return 'its tie';
+                } else if (computerChoice === 'ball' && userChoice === 'bat') {
+                    return 'user win';
+                } else if (computerChoice === 'stamp' && userChoice === 'bat') {
+                    return 'user win';
+                } else {
+                    return 'out of sylebus';
+                }
+            } else if (userChoice === 'ball') {
+                if (computerChoice == userChoice) {
+                    return 'its tie';
+                } else if (computerChoice === 'bat' && userChoice === 'ball') {
+                    return 'user win';
+                } else if (computerChoice === 'stamp' && userChoice === 'ball') {
+                    return 'user win';
+                }
             } else {
-                result = 'tie';
+                if (computerChoice == userChoice) {
+                    return 'its tie';
+                } else if (computerChoice === 'bat' && userChoice === 'stamp') {
+                    return 'user win';
+                } else if (computerChoice === 'ball' && userChoice === 'stamp') {
+                    return 'user win';
+                }
             }
-            console.log(result);
-
         }
+        result = console.log(two(computerChoice, userChoice));
     </script>
 </body>
 

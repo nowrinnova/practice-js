@@ -8,18 +8,24 @@
 </head>
 
 <body>
+    <button onclick="
+        alert(one());
+        ">hii</button>
     <script>
-        function rendomNumber() {
-            let randomChoose = Math.random();
-            let finalResult = randomChoose * 4;
-            return finalResult;
-        }
+        function one() {
+            let number = Math.random() * 3;
+            console.log(number);
+            if (number > 0 && number <= 1) {
+                return 'bat';
+            } else if (number > 1 && number <= 2) {
+                return 'ball';
+            } else {
+                return 'stamp';
+            }
 
-        console.log(rendomNumber());
-        console.log(rendomNumber());
-        console.log(rendomNumber());
-        console.log(rendomNumber());
-        console.log(rendomNumber());
+
+        }
+        console.log(one());
     </script>
 </body>
 
