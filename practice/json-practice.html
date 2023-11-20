@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="greeting"> </h1>
+    <button id="click" onclick="buttonPressed()">0</button>
+    <script>
+        let noOfTimesClicked = 0;
+
+        function buttonPressed() {
+            // let button = document.querySelector('#click');
+            noOfTimesClicked++;
+            // button.innerText = noOfTimesClicked;
+            document.querySelector('#click').innerText = noOfTimesClicked;
+            console.log(noOfTimesClicked);
+
+        }
+
+        function doGreeting(name) {
+            let mydate = new Date();;
+            let hours = mydate.getHours();
+            let printTime;
+            if (hours > 6 && hours <= 11) {
+                printTime = `good morning ${name}`;
+            } else if (hours >= 12 && hours <= 15) {
+                printTime = `good noon ${name}`;
+            } else if (hours >= 16 && hours < 19) {
+                printTime = `good afternoon ${name}`;
+            } else {
+                printTime = `good night ${name}`;
+
+            }
+            document.querySelector('#greeting').innerText = printTime;
+        }
+        doGreeting('nova');
+    </script>
+</body>
+
+</html>
