@@ -5,22 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <Style>
+        .js-odd {
+            background-color: red;
+        }
+
+        .js-even {
+            background-color: green;
+        }
+    </Style>
 </head>
 
 <body>
     <h1 id="greeting"> </h1>
-    <button id="click" onclick="buttonPressed()">0</button>
+    <button id="my-button" onclick=" buttonPressed()">0</button>
+    <h3 class="classify">let's start</h3>
     <script>
-        let noOfTimesClicked = 0;
+        let noOfButtonPressed = localStorage.getItem('noOfButtonPressed');
 
         function buttonPressed() {
-            // let button = document.querySelector('#click');
-            noOfTimesClicked++;
-            // button.innerText = noOfTimesClicked;
-            document.querySelector('#click').innerText = noOfTimesClicked;
-            console.log(noOfTimesClicked);
-
+            noOfButtonPressed++;
+            localStorage.setItem('noOfButtonPressed', noOfButtonPressed);
+            update();
         }
+
+        function update() {
+
+
+            let button = document.querySelector('#my-button');
+            button.innerText = noOfButtonPressed;
+            if (noOfButtonPressed % 2 == 0) {
+                button.classList.remove('js-odd');
+                button.classList.add('js-even');
+                let buttonUpdate = document.querySelector('.classify');
+                buttonUpdate.innerText = 'even';
+            } else {
+                button.classList.remove('js-even');
+                button.classList.add('js-odd');
+                let buttonUpdate = document.querySelector('.classify');
+                buttonUpdate.innerText = 'odd';
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        //     let noOfTimesClicked = 0;
+        //     let Cheack;
+
+        //    function buttonPressed() {
+        //     let button = noOfTimesClicked++;
+        //     let buttonPress = document.querySelector('#click');
+        //   buttonPress.innerText = noOfTimesClicked;
+        //          console.log(noOfTimesClicked);
+        //          if (button % 2 == 0) {
+        //              buttonPress.classList.remove('odd');
+        //              buttonPress.classList.add('even');
+        //          } else {
+        //              buttonPress.classList.remove('even');
+        //              buttonPress.classList.add('odd');
+        //         }
+        //          console.log(Cheack);
+
+        //      }
 
         function doGreeting(name) {
             let mydate = new Date();;
