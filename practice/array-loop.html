@@ -86,13 +86,13 @@
         //     console.log(arr[i]);
         // }
         let ar = [1, 2, 3, 4, 5, 6, 7]
-        ar.push(8);
+
         console.log(ar);
         for (let i = 0; i < 7; i++) {
-            if (ar[i] == 8) {
-                console.log('got it');
+            if (ar[i] % 2 == 0) {
+                console.log(ar[i] + 'even');
             } else {
-                console.log('sorry');
+                console.log(ar[i] + 'odd');
             }
         }
     </script>
