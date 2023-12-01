@@ -1,0 +1,21 @@
+#main-heading {
+    font-weight: bold;
+    display: grid;
+    justify-content: center;
+}
+
+#btn-todo {
+    font-size: 20px;
+    background: brown;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#todo-input {
+    font-size: 15px;
+}
+
+#todo-date {
+    font-size: 15px;
+}
