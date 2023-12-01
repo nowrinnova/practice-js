@@ -1,12 +1,20 @@
-todoList=[];
+todoList=['nova','bye'];
 
 function addTodo(){
     let inputElement=document.querySelector('#todo-input');
-    let inputDate=document.querySelector('#todo-date');
-
     let todoElement=inputElement.value;
-    let todoDate=inputDate.value;
-    todoList.push(todoElement , todoDate);
-inputElement.value='';
+    todoList.push(todoElement );
+    inputElement.value='';
+    displayItem();
+    
+    }
+    function displayItem(){
+    let displayElement=document.getElementById('todoItems');
+    for(let i=0 ; i<todoList.length ;i++){
+        displayElement.innerText=displayElement.innerText+todoList[i];
+    }
+   
+  
+
 
 }
