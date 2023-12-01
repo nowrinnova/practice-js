@@ -10,8 +10,10 @@ function addTodo(){
     }
     function displayItem(){
     let displayElement=document.getElementById('todoItems');
+    displayElement.innerText='';
     for(let i=0 ; i<todoList.length ;i++){
-        displayElement.innerText=displayElement.innerText+todoList[i];
+        displayElement.innerText=displayElement.innerText+'\n'+todoList[i];
+        
     }
    
   
