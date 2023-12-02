@@ -1,22 +1,12 @@
-todoList=['nova','bye'];
+let item=['nova'];
 
 function addTodo(){
     let inputElement=document.querySelector('#todo-input');
-    let todoElement=inputElement.value;
-    todoList.push(todoElement );
+    let inputValue=inputElement.value;
+    let todoElement= document.querySelector('#todoItems');
+    // console.log(todoElement.innerText=inputValue);
+     item =todoElement.innerText=inputValue;
     inputElement.value='';
-    displayItem();
-    
-    }
-    function displayItem(){
-    let displayElement=document.getElementById('todoItems');
-    displayElement.innerText='';
-    for(let i=0 ; i<todoList.length ;i++){
-        displayElement.innerText=displayElement.innerText+'\n'+todoList[i];
-        
-    }
-   
-  
-
+    console.log(item);
 
 }
