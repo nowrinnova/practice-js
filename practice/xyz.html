@@ -16,6 +16,7 @@
 
         function clk() {
             let inputElement = document.getElementById('input').value;
+            document.getElementById('input').value = '';
             console.log(inputElement);
             array.push(inputElement);
             display();
@@ -23,7 +24,6 @@
 
         function display() {
             for (let i = 0; i < array.length; i++) {
-                displayElement = array[i];
                 document.getElementById('display').innerText = array;
             }
         }
