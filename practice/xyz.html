@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array r bal ta jodi na feleici</title>
+</head>
+
+<body>
+    <input id="input" type="text" placeholder="enter your number">
+    <button onclick="clk()">press</button>
+    <p id="display"></p>
+    <script>
+        let array = [2, 3, 4, 5];
+        let item;
+
+        function clk() {
+            for (let i = 0; i < array.length; i++) {
+                item = array[i];
+                console.log(array[i]);
+                console.log('item:' + item);
+            }
+            display();
+        }
+
+        function display() {
+            document.getElementById('display').innerText = array;
+
+        }
+    </script>
+</body>
+
+</html>
