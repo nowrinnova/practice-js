@@ -12,21 +12,20 @@
     <button onclick="clk()">press</button>
     <p id="display"></p>
     <script>
-        let array = [2, 3, 4, 5];
-        let item;
+        let array = [];
 
         function clk() {
-            for (let i = 0; i < array.length; i++) {
-                item = array[i];
-                console.log(array[i]);
-                console.log('item:' + item);
-            }
+            let inputElement = document.getElementById('input').value;
+            console.log(inputElement);
+            array.push(inputElement);
             display();
         }
 
         function display() {
-            document.getElementById('display').innerText = array;
-
+            for (let i = 0; i < array.length; i++) {
+                displayElement = array[i];
+                document.getElementById('display').innerText = array;
+            }
         }
     </script>
 </body>
