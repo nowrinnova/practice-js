@@ -10,9 +10,9 @@
 <body>
     <input id="input" type="text" placeholder="enter your number">
     <button onclick="clk()">press</button>
-    <p id="display"></p>
+    <div id="display"></div>
     <script>
-        let array = [];
+        let array = ['meeting with rj group', 'finish all assingment'];
 
         function clk() {
             let inputElement = document.getElementById('input').value;
@@ -22,10 +22,24 @@
             display();
         }
 
+
         function display() {
+            let displayElement = document.getElementById('display');
+
+            let newHtml = '';
             for (let i = 0; i < array.length; i++) {
-                document.getElementById('display').innerText = array;
+                let item = array[i];
+                newHtml +=
+                    `<div><span>${item}</span>
+                        <button class='btn-delete' onclick="array.splice(${i}, 1);
+                         display();">Delete</button>
+                </div>
+                `;
+                displayElement.innerHTML = newHtml;
+                // document.getElementById('display').innerText = array;
             }
+
+
         }
     </script>
 </body>
