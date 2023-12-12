@@ -1,15 +1,30 @@
-let itemContainerElement=document.querySelector('.items-container');
-itemContainerElement.innerHTML =`<div class="item-container">
-<img class="item-img" src="images/1.jpg" alt="item-picture">
+let itemsContainerElement=document.querySelector('.items-container');
+let item={
+    item_image:'images/1.jpg',
+    rating:{
+        stars: 4.5,
+        noOfReviews:1400,
+
+    },
+    company_name:'calton London',
+    item_name:'Rodihum-plated CZ Floral Studes',
+    price:{
+        current_price:'Rs 606',
+        original_price:'Rs 1045',
+        discount:'(42% Off)',
+    },
+}
+itemsContainerElement.innerHTML =`<div class="item-container">
+<img class="item-img" src="${item.item_image}" alt="item-picture">
 <div class="rating">
-    4.5 ⭐ 5 | 1.4k
+   ${item.rating.stars} ⭐ 5 | ${item.rating.noOfReviews}
 </div>
-<div class="company-name">calton London</div>
-<div class="item-name">Rodihum-plated CZ Floral Studes</div>
+<div class="company-name">${item.company_name}</div>
+<div class="item-name">${item.item_name}</div>
 <div class="price">
-    <span class="current-price">Rs 606</span>
-    <span class="original-price">Rs 1045</span>
-    <span class="discount">(42% Off)</span>
+    <span class="current-price">${item.price.current_price}</span>
+    <span class="original-price">${item.price.original_price_price}</span>
+    <span class="discount">${item.price.discount}</span>
 </div>
 <button class="btn-add-bag">Add to Cart</button>
 </div>`;
