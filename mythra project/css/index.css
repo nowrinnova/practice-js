@@ -243,7 +243,7 @@ header {
 }
 
 .items-container {
-    display: flex;
+    /* display: flex; */
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
@@ -296,6 +296,7 @@ header {
     height: 50px;
     margin-left: 15px;
     margin-top: 10px;
+    margin-bottom: 20px;
     border-radius: 4px;
     background-color: rgb(195, 244, 122);
     border: none;
