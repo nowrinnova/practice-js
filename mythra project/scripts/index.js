@@ -1,6 +1,7 @@
-displayElementsOfHomePage()
-function add(){
-
+displayElementsOfHomePage();
+let bagItem=[];
+function addToBag(itemId){
+bagItem.push(itemId);
 }
 
 function displayElementsOfHomePage(){
@@ -19,7 +20,7 @@ function displayElementsOfHomePage(){
         <span class="original-price">${item.original_price}</span>
         <span class="discount">(${item.discount_percentage}%OFF)</span>
     </div>
-    <button class="btn-add-bag"  onclick="add()">Add to Cart</button>
+    <button class="btn-add-bag"  onclick="addToBag(${item.id})">Add to Cart</button>
     </div>`
         
     });
