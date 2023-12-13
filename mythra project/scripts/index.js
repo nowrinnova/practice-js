@@ -2,6 +2,11 @@ displayElementsOfHomePage();
 let bagItem=[];
 function addToBag(itemId){
 bagItem.push(itemId);
+displayBagIcon();
+}
+function displayBagIcon(){
+    let bagIconCount= document.querySelector('.bag-item-count');
+    bagIconCount.innerText=bagItem.length
 }
 
 function displayElementsOfHomePage(){
