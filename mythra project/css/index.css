@@ -245,6 +245,7 @@ header {
 
 .items-container {
     /* display: flex; */
+    width: 100%;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;
@@ -274,7 +275,7 @@ header {
 }
 
 .item-name {
-    font-size: 12px;
+    font-size: 10px;
     color: #94969f;
 }
 

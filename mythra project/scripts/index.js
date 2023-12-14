@@ -1,13 +1,25 @@
+let bagItems=[];
 displayElementsOfHomePage();
-let bagItem=[];
+displayBagIcon();
+
 function addToBag(itemId){
-bagItem.push(itemId);
+bagItems.push(itemId);
 displayBagIcon();
 }
-function displayBagIcon(){
-    let bagIconCount= document.querySelector('.bag-item-count');
-    bagIconCount.innerText=bagItem.length
+
+
+function displayBagIcon() {
+  let bagItemCountElement = document.querySelector('.bag-item-count');
+  if (bagItems.length > 0) {
+    console.log('I am here');
+    bagItemCountElement.style.visibility = 'visible';
+    bagItemCountElement.innerText = bagItems.length;
+  } else {
+    bagItemCountElement.style.visibility = 'hidden';
+  }
 }
+
+
 
 function displayElementsOfHomePage(){
     let itemsContainerElement=document.querySelector('.items-container');
