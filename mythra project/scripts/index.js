@@ -1,9 +1,17 @@
-let bagItems=[];
-displayElementsOfHomePage();
-displayBagIcon();
+let bagItems;
+onload();
+
+function onload(){
+    let bagItemsStr = localStorage.getItem('bagItems');
+    bagItems = bagItemsStr ? JSON.parse(bagItemsStr):[];
+    displayElementsOfHomePage();
+    displayBagIcon();
+}
+
 
 function addToBag(itemId){
 bagItems.push(itemId);
+localStorage.setItem('bagItems',JSON.stringify(bagItems));
 displayBagIcon();
 }
 
@@ -42,6 +50,6 @@ function displayElementsOfHomePage(){
         
     });
     
-    itemsContainerElement.innerHTML =innerHTML;
+    itemsContainerElement.innerHTML=innerHTML;
 }
 
