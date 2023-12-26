@@ -16,7 +16,6 @@ function loadBagItemObjects() {
       }
     }
   });
-  console.log(bagItemObjects);
 }
 
 function displayBagItems() {
