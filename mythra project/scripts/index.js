@@ -32,6 +32,10 @@ function displayBagIcon() {
 function displayElementsOfHomePage(){
     let itemsContainerElement=document.querySelector('.items-container');
     let innerHTML='';
+    console.log(itemsContainerElement);
+    if (itemsContainerElement===null){
+      return;
+    }
     items.forEach(item => {
         innerHTML+=`<div class="item-container">
     <img class="item-img" src="${item.image}" alt="item-picture">
