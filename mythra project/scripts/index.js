@@ -6,6 +6,7 @@ function onload(){
     bagItems = bagItemsStr ? JSON.parse(bagItemsStr):[];
     displayElementsOfHomePage();
     displayBagIcon();
+    
 }
 
 
@@ -19,7 +20,6 @@ displayBagIcon();
 function displayBagIcon() {
   let bagItemCountElement = document.querySelector('.bag-item-count');
   if (bagItems.length > 0) {
-    console.log('I am here');
     bagItemCountElement.style.visibility = 'visible';
     bagItemCountElement.innerText = bagItems.length;
   } else {
@@ -32,7 +32,6 @@ function displayBagIcon() {
 function displayElementsOfHomePage(){
     let itemsContainerElement=document.querySelector('.items-container');
     let innerHTML='';
-    console.log(itemsContainerElement);
     if (itemsContainerElement===null){
       return;
     }
