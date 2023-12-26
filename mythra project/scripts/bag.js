@@ -28,6 +28,13 @@ function displayBagItems() {
   containerElement.innerHTML = innerHTML;
 }
 
+function removeFromBag(itemId){
+    bagItems= bagItems.filter(bagItemId=>bagItemId !=itemId);
+    localStorage.setItem('bagItems',JSON.stringify(bagItems));
+    displayBagIcon();
+    loadBagItemObjects() ;
+    displayBagItems();
+}
 
 function generateItemHTML(item) {
   return `<div class="bag-item-container">
