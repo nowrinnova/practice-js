@@ -1,3 +1,4 @@
+const  CONVENIENCE =99;
 let bagItemObjects;
 onLoad();
 
@@ -21,24 +22,35 @@ function loadBagItemObjects() {
 
 function displayBagSummery(){
   let bagSummeryElement=document.querySelector('.bag-summary');
+
+  let totalItems=bagItemObjects.length;
+  let totalMRP=0;
+  let totalDiscount=0;
+  let totalAmount=0;
+bagItemObjects.forEach(bagItem => {
+  totalMRP +=bagItem.original_price;
+  totalDiscount += bagItem.original_price-bagItem.current_price;
+  totalAmount = totalMRP - totalDiscount;
+  
+});
   bagSummeryElement.innerHTML=` <div class="bag-details-container">
-  <div class="price-header">PRICE DETAILS (2 Items) </div>
+  <div class="price-header">PRICE DETAILS (${totalItems} Items) </div>
   <div class="price-item">
       <span class="price-item-tag">Total MRP</span>
-      <span class="price-item-value">Rs1284</span>
+      <span class="price-item-value">Rs${totalMRP}</span>
   </div>
   <div class="price-item">
       <span class="price-item-tag">Discount on MRP</span>
-      <span class="price-item-value priceDetail-base-discount">-Rs143</span>
+      <span class="price-item-value priceDetail-base-discount">-Rs${totalDiscount}</span>
   </div>
   <div class="price-item">
-      <span class="price-item-tag">Convenience Fee</span>
-      <span class="price-item-value">Rs 99</span>
+      <span class="price-item-tag">Conceience fees</span>
+      <span class="price-item-value">Rs ${CONVENIENCE}</span>
   </div>
   <hr>
   <div class="price-footer">
       <span class="price-item-tag">Total Amount</span>
-      <span class="price-item-value">Rs 1240</span>
+      <span class="price-item-value">${totalAmount}</span>
   </div>
 </div>
   <button class="btn-place-order">
@@ -61,6 +73,7 @@ function removeFromBag(itemId){
     displayBagIcon();
     loadBagItemObjects() ;
     displayBagItems();
+    displayBagSummery();
 }
 
 function generateItemHTML(item) {
